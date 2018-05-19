@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Example</title>
+    <link rel="stylesheet" type="text/css" href="css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="css/dx.light.css" />
+
+    <script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="js/dx.all.js"></script>
+</head>
+<body id="form">
+
+    <div class="dx-fieldset">
+        <div class="dx-field">
+            <div class="dx-field-label">
+                Integer
+            </div>
+            <div class="dx-field-value">
+                <div id="integerContainer"></div>
+            </div>
+        </div>
+        <div class="dx-field">
+            <div class="dx-field-label">
+                Float
+            </div>
+            <div class="dx-field-value">
+                <div id="floatContainer"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(function () {
+            $("#integerContainer").dxNumberBox({
+                valueChangeEvent: "keyup",
+                onkeyPress: function (e) {
+                    var event = e.jQueryEvent,
+                        str = String.fromCharCode(event.keyCode);
+                    if (!/[0-9]/.test(str))
+                        event.preventDefault();
+                }
+            });
+
+            $("#floatContainer").dxNumberBox({
+                valueChangeEvent: "keyup",
+                onkeyPress: function (e) {
+                    var str = String.fromCharCode(e.jQueryEvent.keyCode);
+                    if (!/[0-9.,]/.test(str))
+                        event.preventDefault();
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
+
