@@ -1,6 +1,6 @@
 # dxNumberBox - How to allow entering only integer/float numbers
 <!-- run online -->
-**[[Run Online]](https://codecentral.devexpress.com/e4941)**
+**[[Run Online]](https://codecentral.devexpress.com/e4941/)**
 <!-- run online end -->
 
 
